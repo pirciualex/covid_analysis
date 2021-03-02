@@ -1,0 +1,8 @@
+.about .technologies img {
+    width: 200px;
+}
+
+.about .technologies img:nth-child(odd) {
+    padding-top: 1.5rem;
+    padding-right: 2rem;
+}

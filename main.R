@@ -1,5 +1,5 @@
 library("pacman")
-pacman::p_load(shiny, dashboard, DT, fs, wbstats,
+pacman::p_load(shiny, shinydashboard, dashboard, DT, fs, wbstats,
                leaflet, plotly, tidyverse, magrittr)
 
 source("utils.R")
@@ -43,7 +43,7 @@ data_last_update <- as.Date(last_date, format = "%m.%d.%y")
 files_last_update <- file.info("data/covid_data.zip")$ctime
 
 
-# processing the data
+# Preprocessing the data
 confirmed_data_proc <-  confirmed_data %>%
                         pivot_longer(names_to = "Date", cols = 5:ncol(confirmed_data) )%>%
                         group_by(Province.State, Country.Region, Date, Lat, Long) %>%

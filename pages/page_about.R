@@ -23,7 +23,7 @@ about_body <- dashboardBody(
       width = 12
     )
   ),
-  class = "about"
+  class = "about-page"
 )
 
 page_about <- dashboardPage(

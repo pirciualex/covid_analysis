@@ -17,6 +17,8 @@ about_body <- dashboardBody(
           href = "https://www.r-project.org/"),
         a(img(src = "img/shiny_logo.jpg", alt = "Shiny logo"),
           href = "https://shiny.rstudio.com/"),
+        a(img(src = "img/plotly_logo.png", alt = "Plotly logo"),
+          href = "https://plotly.com/"),
         width = 6,
         class = "technologies"
       ),

@@ -13,8 +13,8 @@ ui <- fluidPage(
     title = div("COVID-19 Statistical Analysis App"),
     collapsible = TRUE,
     # tabPanel("Home", page_home, value = "page-home"),
+    tabPanel("Graphics", page_graphics, value = "page-graphics"),
     tabPanel("Table View", page_table, value = "page-table"),
-    # tabPanel("Graphics", page_graphics, value = "page-graphics"),
     tabPanel("About", page_about, value = "page-about")
   )
 )

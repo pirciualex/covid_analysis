@@ -1,6 +1,6 @@
 library("pacman")
 pacman::p_load(shiny, shinydashboard, dashboard, DT, fs, wbstats,
-               leaflet, plotly, tidyverse, magrittr)
+               leaflet, plotly, tidyverse, magrittr, htmltools)
 
 source("utils.R")
 
@@ -119,6 +119,11 @@ read_data <- function() {
     arrange(desc(Active)) %>%
     top_n(5) %>%
     select(Country.Region)
+}
+
+data_at_date <- function(input_date) {
+  evolution_data[which(evolution_data$Date == input_date),] %>%
+    distinct()
 }
 
 read_data()
